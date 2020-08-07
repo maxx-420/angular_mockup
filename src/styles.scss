@@ -8,13 +8,12 @@ $font-family: Arial, Helvetica, sans-serif;
   padding: 0;
 }
 
-
 body {
   background-color: $background-body;
   font-family: $font-family;
 }
 
-.no-gutters {
+.row {
   margin-right: 0;
   margin-left: 0;
 
