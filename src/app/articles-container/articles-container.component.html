@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-10 text-left mx-lg-0 mx-auto">
+    <section>
+      <h1 class="font-weight-bold title-text">Check recommended articles</h1>
+      <small
+        class="subtitle-text"
+        style="font-size: 13px; font-weight: normal;"
+      >
+        Lorem Ipsum has been the industry's standard dummy text ever since the
+        1500s, when an unknown printer took a galley of type and scrambled it to
+        make a type specimen book.
+      </small>
+    </section>
+    <button class="d-md-none button button--dark button--small">MORE</button>
+  </div>
+</div>
+<div class="row mt-4 flex-wrap">
+  <div
+    *ngFor="let article of articleList1"
+    class="col-10 col-md-3 col-lg-3 col-xl-3 mx-auto mx-md-0 py-3 px-3"
+  >
+    <app-article
+      [title]="article.title"
+      [subtitle]="article.subtitle"
+      [coverImgUrl]="article.coverImgUrl"
+      [avatarImgUrl]="article.avatarImgUrl"
+    ></app-article>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-10 col-md-6 mx-auto py-3" style="max-height: 700px;">
+    <app-player playListHeight="700px"></app-player>
+  </div>
+  <div class="col-10 col-md-6 mx-auto py-3" style="max-height: 700px;">
+    <app-article
+      imageOverlayText="Be Positive"
+      coverImgUrl="../assets/eugene-chystiakov-1483041-unsplash.png"
+      extended="true"
+    >
+      <section>
+        <h1 class="font-weight-bold title-text" style="font-size: 1.2rem;">
+          ABOUT SHOW
+        </h1>
+        <small class="subtitle-text" style="font-size: 1rem; color: #7b8591;">
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book.
+        </small>
+      </section>
+      <section class="mt-5">
+        <h1 class="font-weight-bold title-text" style="font-size: 1.2rem;">
+          NEXT EPISODE
+        </h1>
+        <small class="subtitle-text" style="font-size: 1rem; color: #7b8591;">
+          Every Monday, 7:00 o'clock
+        </small>
+      </section>
+    </app-article>
+    <div class="row py-3">
+      <div
+        *ngFor="let article of articleList2"
+        class="col col-md-4 mx-auto mx-md-0 py-3 px-3"
+      >
+        <app-article
+          [title]="article.title"
+          [subtitle]="article.subtitle"
+          [coverImgUrl]="article.coverImgUrl"
+          [avatarImgUrl]="article.avatarImgUrl"
+          icon="play"
+        ></app-article>
+      </div>
+    </div>
+  </div>
+</div>

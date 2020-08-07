@@ -1,0 +1,69 @@
+@import "../../variables";
+.content {
+  &__landing {
+    background-image: url(../../assets/zachary-nelson-192289-unsplash.png);
+    background-position: 45% 10%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: auto;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgb(141, 137, 252);
+      background: radial-gradient(
+        circle,
+        rgba(70, 45, 173, 0.98) 0%,
+        rgba(70, 45, 173, 0.98) 10%,
+        rgba(70, 45, 173, 0.93) 10%,
+        rgba(70, 45, 173, 0.93) 25%,
+        rgba(70, 45, 173, 0.9) 25%,
+        rgba(70, 45, 173, 0.9) 40%,
+        rgba(70, 45, 173, 0.93) 40%,
+        rgba(70, 45, 173, 0.93) 100%
+      );
+      background-position: top center;
+      opacity: 0.9;
+    }
+  }
+}
+
+.heading {
+  &__subtitle {
+    font-size: 14px;
+    font-weight: lighter;
+  }
+}
+
+.feature-block {
+  &__icon {
+    font-size: 3rem;
+    color: #ffee00;
+    margin-bottom: 1rem;
+    font-weight: 900;
+  }
+  &__title {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  &__subtitle {
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: justify;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .content {
+    &__landing {
+      background-position: top center;
+      background-size: cover;
+      //height: 100vh;
+    }
+  }
+}

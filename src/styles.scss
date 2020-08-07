@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./variables";
+$background-body: #ffffff;
+$font-family: Arial, Helvetica, sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $background-body;
+  font-family: $font-family;
+}
+
+button {
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.button {
+  font-size: 17px;
+  font-weight: lighter;
+  border-radius: 22px;
+  border: none;
+  background-color: #ffffff;
+  color: grey;
+  height: 44px;
+  min-width: 100px;
+  max-width: 250px;
+  padding: 4px 8px;
+  margin: 10px 0px;
+  box-shadow: 0px 6px 12px #0000000d;
+  transition: all 0.2s ease-in-out;
+  &--light {
+    background-color: #ffffff;
+    color: #4621ad;
+    &:hover {
+      background-color: darken($color: #ffffff, $amount: 10%);
+      color: darken($color: #4621ad, $amount: 20%);
+    }
+  }
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    &:hover {
+      background-color: darken($color: transparent, $amount: 20%);
+      color: darken($color: #ffffff, $amount: 20%);
+    }
+  }
+  &--dark {
+    background-color: #4621ad;
+    color: #ffffff;
+    &:hover {
+      background-color: darken($color: #4621ad, $amount: 10%);
+      color: darken($color: #ffffff, $amount: 20%);
+    }
+  }
+  &--small {
+    max-width: 100px;
+    height: 34px;
+    border-radius: 17px;
+  }
+}
+
+.title-text {
+  color: $text-heading-dark;
+  font-size: 40px;
+}
+
+.subtitle-text {
+  color: $text-heading-dark;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: justify;
+}

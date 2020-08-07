@@ -1,0 +1,49 @@
+<div class="card card--round">
+  <div class="card__image">
+    <img
+      class="card-img-top"
+      [src]="coverImgUrl"
+      [alt]="coverImgUrl"
+      style="width: 100%;"
+    />
+    <div
+      *ngIf="extended && imageOverlayText"
+      class="card-img-overlay card__image__overlay"
+    >
+      <p class="card-text">{{imageOverlayText}}</p>
+    </div>
+    <img
+      *ngIf="!extended"
+      class="card__image__avatar"
+      [src]="avatarImgUrl"
+      alt="avatar"
+    />
+  </div>
+  <div class="card-body" [class.extended]="extended">
+    <div #ref>
+      <ng-content></ng-content>
+    </div>
+    <span *ngIf="!ref.innerHTML.trim()">
+      <div class="d-flex card__info">
+        <span>
+          <h4 class="card-title title-text mb-1" style="font-size: 16px;">
+            {{ title}}
+          </h4>
+          <p
+            class="card-text subtitle-text"
+            style="font-size: 13px; color: #7b8591;"
+          >
+            {{subtitle}}
+          </p>
+        </span>
+        <button
+          class="card__info__icon"
+          [class.card__info__icon--play]="icon == 'play'"
+        >
+          <i *ngIf="icon  == 'add'" class="fas fa-plus"></i>
+          <i *ngIf="icon == 'play'" class="fas fa-play"></i>
+        </button>
+      </div>
+    </span>
+  </div>
+</div>

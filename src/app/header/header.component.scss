@@ -1,0 +1,79 @@
+@import "../../variables";
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.nav-item {
+  .nav-link {
+    color: #c6c6d4;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &.active > .nav-link {
+    color: #5f41b6;
+  }
+}
+
+.search-bar {
+  position: relative;
+  width: fit-content;
+  // margin: 0 auto;
+  i {
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 9px);
+    font-size: 18px;
+    color: #bcbccb;
+  }
+  input {
+    border-radius: 18px;
+    background-color: #f6f6f6;
+    text-indent: 20px;
+    color: #c1c1c1;
+    font-size: 12px;
+    border: none;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .flex-1 {
+    flex: 1;
+  }
+  .menu-center > * {
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .md-background {
+    background-color: white !important;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .menu-indent {
+    height: 150px;
+  }
+
+  .nav-item {
+    .nav-link {
+      color: #ffffff;
+      font-size: 15px;
+    }
+    &.active > .nav-link {
+      color: #ffffff;
+      position: relative;
+      &:after {
+        content: "";
+        width: 100%;
+        border-bottom: 2px solid white;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+      }
+    }
+  }
+}
